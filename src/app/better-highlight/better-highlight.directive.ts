@@ -13,6 +13,7 @@ import {
 })
 export class BetterHighlightDirective implements OnInit {
   @Input() defaultColor: string = 'transparent';
+  /* Alias matching the directive selector name means that when the directive is attached to an element, the selector can be wrapped in [] to also bind a value to the aliased property */
   @Input('appBetterHighlight') highlightColor: string = 'blue';
 
   @HostBinding('style.backgroundColor') backgroundColor: string;
